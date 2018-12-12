@@ -7,114 +7,91 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace HotelBell
 {
-    public partial class CheckOut : Form
+    public partial class CheckOut : MaterialForm
     {
         public CheckOut()
         {
             InitializeComponent();
+            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ROBOTO_MEDIUM_10 = new Font("ROBOTO_MEDIUM", 8);
+
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Blue300, Primary.Blue500,
+                Primary.Blue500, Accent.LightBlue200,
+                TextShade.WHITE
+            );
         }
 
         private void picReturn_Click(object sender, EventArgs e)
         {
+            Inicio inicio = new Inicio();
+            Hide();
+            inicio.ShowDialog(this);
+            Show();
             this.Close();
-        }
-
-        private void comboBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void CheckOut_Load(object sender, EventArgs e)
         {
+            ConexionRecepcionista.checkOut(comboBxNombre, txtBox_celular, txtBox_email, txtBox_habitacion, txtBox_entrada, txtBox_salida,0);
+        }
 
-            bool abrirConexion = false;
-            MySqlConnection conectar = new MySqlConnection("server = 127.0.0.1; database = hotel_reservaciones; Uid = root; pwd =");
-            try
+        private void boton_datos_Click(object sender, EventArgs e)
+        {
+            if (comboBxNombre.Text == "")
             {
-                conectar.Open();
-                abrirConexion = true;
+                //Condicion
+                MessageBox.Show("Necesita seleccionar un nombre.");
             }
-            catch
+            else
             {
-                MessageBox.Show("Hubo un problema, por favor llama al administrador.");
-                abrirConexion = false;
-
-            }
-
-            string query = "SELECT nombre,telefono,email,habitacion from reservaciones";   
-            if (abrirConexion == true)
-            {
-                MySqlCommand comando = new MySqlCommand(query, conectar);
-                MySqlDataReader almacena = comando.ExecuteReader();
-              
-                while (almacena.Read())
-                {
-                    comboBoxClientes.Refresh();
-                    comboBoxClientes.Items.Add(almacena.GetValue(0).ToString());
-                    string nombre = almacena.GetValue(0).ToString();
-
-                    //if (comboBoxClientes.SelectedItem.ToString() == nombre)
-                    
-
-                        lblTelefono.Visible = true;
-                        textBTelefono.Visible = true;
-                        lblEmail.Visible = true;
-                        textBEmail.Visible = true;
-                        lblHabitacion.Visible = true;
-                        textBHabitacion.Visible = true;
-                        textBTelefono.Refresh();
-                        textBTelefono.Text = almacena.GetValue(1).ToString();
-                        textBEmail.Text = almacena.GetValue(2).ToString();
-                        textBHabitacion.Text = almacena.GetValue(3).ToString();
-                   
-                }
-
-                conectar.Close();
+                //Traer nombres
+                ConexionRecepcionista.checkOut(comboBxNombre, txtBox_celular, txtBox_email, txtBox_habitacion, txtBox_entrada, txtBox_salida, 1);
             }
         }
 
-        private void boton_Salida_Click(object sender, EventArgs e)
+        private void boton_checkOut_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Salida confirmada con exito");
+            if (comboBxNombre.Text == "")
+            {
+                //Condicion
+                MessageBox.Show("Necesita seleccionar un nombre.");
+            }
+            else
+            {
+                //Hacer CheckOut - Salida
+                ConexionRecepcionista.checkOut(comboBxNombre, txtBox_celular, txtBox_email, txtBox_habitacion, txtBox_entrada, txtBox_salida, 2);
+            }
         }
 
-       /* private void comboBoxClientes_MouseDown(object sender, MouseEventArgs e)
+        private void picReservacion_Click(object sender, EventArgs e)
         {
-            bool abrirConexion = false;
-            MySqlConnection conectar = new MySqlConnection("server = 127.0.0.1; database = hotel_reservaciones; Uid = root; pwd =");
-            try
-            {
-                conectar.Open();
-                abrirConexion = true;
-            }
-            catch
-            {
-                MessageBox.Show("Hubo un problema, por favor llama al administrador.");
-                abrirConexion = false;
+            Reservar res = new Reservar();
+            Hide();
+            res.ShowDialog(this);
+            Show();
+            this.Close();
+        }
 
-            }
+        private void picCheckIn_Click(object sender, EventArgs e)
+        {
+            CheckIn entrada = new CheckIn();
+            Hide();
+            entrada.ShowDialog(this);
+            Show();
+            this.Close();
+        }
 
-            string query = "SELECT nombre,telefono,email,habitacion from reservaciones";
-            if (abrirConexion == true)
-            {
-
-                MySqlCommand comando = new MySqlCommand(query, conectar);
-                MySqlDataReader almacena = comando.ExecuteReader();
-
-                lblTelefono.Visible = true;
-                textBTelefono.Visible = true;
-                lblEmail.Visible = true;
-                textBEmail.Visible = true;
-                lblHabitacion.Visible = true;
-                textBHabitacion.Visible = true;
-                textBTelefono.Refresh();
-                textBTelefono.Text = almacena.GetValue(1).ToString();
-            }
-            conectar.Close();
-        }*/
+        private void picCheckOut_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Usted se encuentra actualmente en la ventana de Check Out");
+        }
     }
 }

@@ -16,20 +16,11 @@ C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería 
 C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\bin\Debug\Google.Protobuf.xml
 C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\bin\Debug\MySql.Data.xml
 C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.csproj.CopyComplete
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\bin\Debug\HotelBell.exe.config
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\bin\Debug\HotelBell.exe
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\bin\Debug\HotelBell.pdb
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\bin\Debug\Google.Protobuf.dll
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\bin\Debug\MySql.Data.dll
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\bin\Debug\Google.Protobuf.xml
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\bin\Debug\MySql.Data.xml
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.csprojResolveAssemblyReference.cache
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.CheckIn.resources
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.CheckOut.resources
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.Inicio.resources
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.Properties.Resources.resources
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.Reservar.resources
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.csproj.GenerateResource.Cache
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.csproj.CoreCompileInputs.cache
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.exe
-C:\Users\cecil\Desktop\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.pdb
+C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.SplashScreen.resources
+C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.InicioSesion.resources
+C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\bin\Debug\MaterialDesignColors.dll
+C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\bin\Debug\MaterialSkin.dll
+C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\luise\Documents\Miscelania de Programitas\6to Cuatrimestre\Ingeniería en Software\HotelBell\HotelBell\HotelBell\obj\Debug\HotelBell.Administrador.resources
